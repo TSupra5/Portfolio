@@ -1,0 +1,271 @@
+/*
+ * Modal Component
+ * Championship modal system with overlay and animations
+ */
+
+/* === MODAL OVERLAY === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: var(--z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal) var(--ease-in-out-smooth);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* === CHAMPIONSHIP MODAL === */
+.championship-modal {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 1000px;
+  overflow: hidden;
+  transform: translateY(50px) scale(0.9);
+  transition: all var(--transition-normal) var(--ease-in-out-smooth);
+  border: var(--border-width-thin) solid rgba(86, 156, 214, 0.3);
+  display: none;
+}
+
+.modal-overlay.active .championship-modal.active {
+  transform: translateY(0) scale(1);
+  display: block;
+}
+
+/* === MODAL HEADER === */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-xl) var(--spacing-2xl);
+  background: var(--color-bg-primary);
+  border-bottom: var(--border-width-thin) solid rgba(86, 156, 214, 0.2);
+}
+
+.modal-header h2 {
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-3xl);
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast) var(--ease-in-out-smooth);
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* === MODAL CONTENT === */
+.modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-2xl);
+  max-height: calc(90vh - 100px);
+  overflow-y: auto;
+}
+
+.modal-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image .image-placeholder {
+  width: 100%;
+  height: 300px;
+  background: var(--color-bg-tertiary);
+  border: var(--border-width-thick) dashed rgba(86, 156, 214, 0.3);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.modal-details {
+  color: var(--color-text-primary);
+}
+
+.modal-details h3 {
+  color: var(--color-accent-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-accent-primary);
+  padding-bottom: var(--spacing-sm);
+}
+
+.modal-details h4 {
+  color: var(--color-accent-secondary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin: var(--spacing-xl) 0 var(--spacing-md) 0;
+}
+
+.modal-details p {
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.modal-details ul {
+  margin: var(--spacing-md) 0 var(--spacing-lg) var(--spacing-lg);
+  color: var(--color-text-primary);
+}
+
+.modal-details li {
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+.modal-details strong {
+  color: var(--color-accent-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* === MODAL TRIGGER BUTTON === */
+.championship-link.modal-trigger {
+  background: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  transition: all var(--transition-fast) var(--ease-in-out-smooth);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.championship-link.modal-trigger:hover {
+  background: var(--color-accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(86, 156, 214, 0.3);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .championship-modal {
+    width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .modal-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg);
+  }
+  
+  .modal-header {
+    padding: var(--spacing-lg) var(--spacing-xl);
+  }
+  
+  .modal-header h2 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .modal-image .image-placeholder {
+    height: 200px;
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .championship-modal {
+    width: 98vw;
+    max-height: 98vh;
+  }
+  
+  .modal-content {
+    padding: var(--spacing-md);
+  }
+  
+  .modal-header {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .modal-details h3 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .modal-details h4 {
+    font-size: var(--font-size-base);
+  }
+}
+
+/* === ANIMATIONS === */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+}
+
+/* === SCROLLBAR STYLING === */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: var(--color-bg-tertiary);
+  border-radius: var(--border-radius-sm);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--color-accent-primary);
+  border-radius: var(--border-radius-sm);
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-secondary);
+}

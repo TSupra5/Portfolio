@@ -74,6 +74,10 @@
 
 /* === TEAM SECTION === */
 .team-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--spacing-4xl) 0;
   background: var(--color-bg-secondary);
 }
@@ -101,8 +105,17 @@
 
 /* === CHAMPIONSHIPS SECTION === */
 .championships-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: var(--spacing-4xl) 0;
-  background: var(--color-bg-secondary);
+  background: var(--color-bg-primary);
+  color: var(--color-text-inverse);
+}
+
+.championships-section .section-title {
+  color: var(--color-text-inverse);
 }
 
 .season-badge {
@@ -119,8 +132,12 @@
 
 /* === EXPERIENCE SECTION === */
 .experience-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--spacing-4xl) 0;
-  background: var(--color-bg-tertiary);
+  background: var(--color-bg-secondary);
 }
 
 .experience-intro {
@@ -169,6 +186,10 @@
 
 /* === CONTACT SECTION === */
 .contact-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: var(--spacing-4xl) 0;
   background: var(--color-bg-primary);
   color: var(--color-text-inverse);

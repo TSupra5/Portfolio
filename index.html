@@ -82,36 +82,36 @@
             <span class="season-badge">SAISON 2025</span>
             
             <div class="championships-grid">
-                <div class="championship-card">
+                <div class="championship-card" data-modal="gt-world">
                     <div class="championship-image">
                         <div class="image-placeholder">[Photo Course GT]</div>
                     </div>
                     <div class="championship-content">
                         <h3>GT WORLD CHALLENGE</h3>
                         <p>En 2025, TLM Racing s'engage dans le GT World Challenge avec ses bolides dernière génération. Un défi technique et sportif de haut niveau.</p>
-                        <a href="#" class="championship-link">Voir le Site Officiel</a>
+                        <button class="championship-link modal-trigger" data-modal="gt-world">En savoir plus</button>
                     </div>
                 </div>
 
-                <div class="championship-card">
+                <div class="championship-card" data-modal="endurance">
                     <div class="championship-image">
                         <div class="image-placeholder">[Photo Course Endurance]</div>
                     </div>
                     <div class="championship-content">
                         <h3>CHAMPIONNAT ENDURANCE</h3>
                         <p>Le team TLM Racing participe aux courses d'endurance les plus prestigieuses, testant la fiabilité et la performance de nos machines.</p>
-                        <a href="#" class="championship-link">Voir le Site Officiel</a>
+                        <button class="championship-link modal-trigger" data-modal="endurance">En savoir plus</button>
                     </div>
                 </div>
 
-                <div class="championship-card">
+                <div class="championship-card" data-modal="sprint">
                     <div class="championship-image">
                         <div class="image-placeholder">[Photo Course Sprint]</div>
                     </div>
                     <div class="championship-content">
                         <h3>CHAMPIONSHIP SPRINT</h3>
                         <p>Des courses intenses et spectaculaires où chaque seconde compte. TLM Racing excelle dans cette discipline exigeante.</p>
-                        <a href="#" class="championship-link">Voir le Site Officiel</a>
+                        <button class="championship-link modal-trigger" data-modal="sprint">En savoir plus</button>
                     </div>
                 </div>
             </div>
@@ -208,38 +208,134 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>TLM RACING</h4>
-                    <ul>
-                        <li><a href="#team">L'Équipe</a></li>
-                        <li><a href="#championships">Championnats</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#experience">TLM Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Légal</h4>
-                    <ul>
-                        <li><a href="#">Mentions Légales</a></li>
-                        <li><a href="#">Politique de Confidentialité</a></li>
-                        <li><a href="#">CGV</a></li>
-                    </ul>
-                </div>
+    <!-- Championship Modals -->
+    <div id="modal-overlay" class="modal-overlay">
+        <!-- GT World Challenge Modal -->
+        <div id="gt-world-modal" class="championship-modal">
+            <div class="modal-header">
+                <h2>GT WORLD CHALLENGE</h2>
+                <button class="modal-close">&times;</button>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 TLM Racing. Tous droits réservés - Made with ❤️</p>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <div class="image-placeholder">[Photo Course GT - Grande]</div>
+                </div>
+                <div class="modal-details">
+                    <h3>Défi Technique et Sportif</h3>
+                    <p>En 2025, TLM Racing s'engage dans le GT World Challenge avec ses bolides dernière génération. Cette compétition représente le summum du sport automobile GT, où performance, technologie et stratégie se rencontrent.</p>
+                    
+                    <h4>Caractéristiques Techniques</h4>
+                    <ul>
+                        <li><strong>Voitures:</strong> GT3 dernière génération</li>
+                        <li><strong>Puissance:</strong> 500+ chevaux</li>
+                        <li><strong>Vitesse max:</strong> 300+ km/h</li>
+                        <li><strong>Poids:</strong> 1300 kg minimum</li>
+                    </ul>
+
+                    <h4>Calendrier 2025</h4>
+                    <ul>
+                        <li>Mars: Monza (Italie)</li>
+                        <li>Avril: Brands Hatch (Angleterre)</li>
+                        <li>Mai: Paul Ricard (France)</li>
+                        <li>Juin: Nürburgring (Allemagne)</li>
+                        <li>Septembre: Barcelona (Espagne)</li>
+                        <li>Octobre: Zolder (Belgique)</li>
+                    </ul>
+
+                    <h4>Notre Engagement</h4>
+                    <p>TLM Racing engage 2 voitures dans cette compétition avec nos meilleurs pilotes. L'objectif : décrocher le titre constructeur et former nos jeunes talents.</p>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Endurance Championship Modal -->
+        <div id="endurance-modal" class="championship-modal">
+            <div class="modal-header">
+                <h2>CHAMPIONNAT ENDURANCE</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <div class="image-placeholder">[Photo Course Endurance - Grande]</div>
+                </div>
+                <div class="modal-details">
+                    <h3>L'Art de l'Endurance</h3>
+                    <p>Le team TLM Racing participe aux courses d'endurance les plus prestigieuses, testant la fiabilité et la performance de nos machines sur de longues distances.</p>
+                    
+                    <h4>Disciplines</h4>
+                    <ul>
+                        <li><strong>4 Heures:</strong> Courses de milieu de distance</li>
+                        <li><strong>6 Heures:</strong> Épreuves d'endurance classique</li>
+                        <li><strong>12 Heures:</strong> Challenges extrêmes</li>
+                        <li><strong>24 Heures:</strong> L'ultime test</li>
+                    </ul>
+
+                    <h4>Circuits Emblématiques</h4>
+                    <ul>
+                        <li>Le Mans (France) - 24H mythiques</li>
+                        <li>Spa-Francorchamps (Belgique)</li>
+                        <li>Nürburgring (Allemagne)</li>
+                        <li>Silverstone (Angleterre)</li>
+                        <li>Paul Ricard (France)</li>
+                    </ul>
+
+                    <h4>Stratégie d'Équipe</h4>
+                    <p>L'endurance demande une parfaite coordination entre pilotes, ingénieurs et mécaniciens. Chaque arrêt au stand, chaque relais de pilote est minutieusement calculé.</p>
+
+                    <h4>Technologies</h4>
+                    <p>Nos voitures intègrent les dernières innovations en matière d'efficacité énergétique, d'aérodynamisme et de gestion thermique pour tenir sur la distance.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sprint Championship Modal -->
+        <div id="sprint-modal" class="championship-modal">
+            <div class="modal-header">
+                <h2>CHAMPIONSHIP SPRINT</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="modal-image">
+                    <div class="image-placeholder">[Photo Course Sprint - Grande]</div>
+                </div>
+                <div class="modal-details">
+                    <h3>Intensité Maximale</h3>
+                    <p>Des courses intenses et spectaculaires où chaque seconde compte. TLM Racing excelle dans cette discipline exigeante qui privilégie la vitesse pure et les dépassements.</p>
+                    
+                    <h4>Format de Course</h4>
+                    <ul>
+                        <li><strong>Durée:</strong> 25-45 minutes</li>
+                        <li><strong>Qualifications:</strong> 15 minutes chrono</li>
+                        <li><strong>Warm-up:</strong> 10 minutes d'échauffement</li>
+                        <li><strong>Points:</strong> Top 10 marquent des points</li>
+                    </ul>
+
+                    <h4>Circuits Sprint 2025</h4>
+                    <ul>
+                        <li>Magny-Cours (France) - Circuit technique</li>
+                        <li>Zandvoort (Pays-Bas) - Tracé rapide</li>
+                        <li>Hungaroring (Hongrie) - Dépassements difficiles</li>
+                        <li>Red Bull Ring (Autriche) - Hautes vitesses</li>
+                        <li>Imola (Italie) - Circuit historique</li>
+                    </ul>
+
+                    <h4>Pilotage Sprint</h4>
+                    <p>Le pilotage en sprint demande une agressivité contrôlée. Pas de place à l'erreur, chaque virage peut faire la différence entre la victoire et l'anonymat.</p>
+
+                    <h4>Tactiques</h4>
+                    <p>Stratégies de dépassement, gestion des pneumatiques sur courte distance, optimisation des réglages pour la vitesse pure. Le sprint récompense l'audace et la précision.</p>
+
+                    <h4>Nos Atouts</h4>
+                    <ul>
+                        <li>Pilotes spécialisés en sprint</li>
+                        <li>Réglages optimisés pour la vitesse</li>
+                        <li>Stratégies de course agressives</li>
+                        <li>Équipe réactive et efficace</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript Modules -->
     <script type="module" src="assets/js/main.js"></script>
