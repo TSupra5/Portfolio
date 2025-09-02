@@ -1,0 +1,34 @@
+{
+  "name": "tlm-racing-portfolio",
+  "version": "2.0.0",
+  "description": "TLM Racing Portfolio - Modular Architecture",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost",
+    "build": "echo 'Build system to be implemented'",
+    "test": "echo 'Testing to be implemented'",
+    "lint": "echo 'Linting to be implemented'"
+  },
+  "keywords": [
+    "portfolio",
+    "racing",
+    "automotive",
+    "modular",
+    "javascript",
+    "css"
+  ],
+  "author": "Thibaut Rouard",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tlm-racing/portfolio"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

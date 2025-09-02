@@ -28,8 +28,7 @@ SectionsLayout/
 │           ├── responsive.css    # Responsive utilities
 │           └── scrollbar.css     # Scrollbar customization
 ├── images/                       # Image assets
-├── index.html                    # Main HTML file
-└── script.js                     # JavaScript functionality
+└── index.html                    # Main HTML file
 ```
 
 ## 🎨 Design System
@@ -146,7 +145,7 @@ The architecture follows a mobile-first approach with these breakpoints:
 
 ## 🚀 Migration from Monolithic CSS
 
-The previous single `style.css` file has been completely refactored into this modular system while maintaining all existing functionality. All classes and styles have been preserved but organized into logical modules.
+The previous monolithic CSS file has been completely refactored into this modular system while maintaining all existing functionality. All classes and styles have been preserved but organized into logical modules.
 
 ## 📋 Development Workflow
 
