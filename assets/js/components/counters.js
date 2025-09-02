@@ -7,7 +7,7 @@
  * Initialize counter animations
  */
 export function initCounters() {
-    const counters = document.querySelectorAll('.stat-number, .palmares-number');
+    const counters = document.querySelectorAll('.stat-number');
     
     if (!counters.length) return;
     
@@ -89,8 +89,7 @@ function addCounterStyles() {
             100% { transform: scale(1); }
         }
         
-        .stat-number,
-        .palmares-number {
+        .stat-number {
             transition: all 0.3s ease;
         }
     `;

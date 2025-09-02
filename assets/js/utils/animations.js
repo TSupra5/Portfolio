@@ -31,7 +31,7 @@ function setupIntersectionObserver() {
     
     // Observe elements for animation
     const animatedElements = document.querySelectorAll(
-        '.team-stats, .palmares-grid, .championships-grid, .experience-grid, .partners-grid'
+        '.team-content, .championships-grid, .experience-grid'
     );
     
     animatedElements.forEach(el => observer.observe(el));
