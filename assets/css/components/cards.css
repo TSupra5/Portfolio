@@ -1,0 +1,220 @@
+/*
+ * Card Components
+ * Reusable card layouts and styles
+ */
+
+/* === BASE CARD === */
+.card {
+  background: var(--color-bg-tertiary);
+  border-radius: var(--border-radius-xl);
+  border: var(--border-width-thin) solid transparent;
+  transition: all var(--transition-fast) var(--ease-in-out-smooth);
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card-content {
+  padding: var(--spacing-xl);
+}
+
+/* === CARD VARIANTS === */
+.card-primary {
+  border-color: rgba(86, 156, 214, 0.2);
+}
+
+.card-primary:hover {
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 15px 35px rgba(86, 156, 214, 0.2);
+}
+
+.card-secondary {
+  background: var(--color-bg-secondary);
+}
+
+.card-dark {
+  background: var(--color-bg-primary);
+  border-color: rgba(86, 156, 214, 0.1);
+}
+
+.card-glass {
+  background: rgba(45, 45, 48, 0.6);
+  backdrop-filter: blur(10px);
+  border: var(--border-width-thin) solid rgba(86, 156, 214, 0.2);
+}
+
+/* === STAT CARDS === */
+.stat-item {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: var(--color-bg-tertiary);
+  border-radius: var(--border-radius-xl);
+  border-left: 5px solid var(--color-accent-primary);
+  transition: transform var(--transition-fast);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  display: block;
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-label {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+/* === PALMARES CARDS === */
+.palmares-item {
+  padding: var(--spacing-xl);
+  background: rgba(45, 45, 48, 0.8);
+  border-radius: var(--border-radius-xl);
+  border: var(--border-width-thick) solid rgba(86, 156, 214, 0.3);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.palmares-item:hover {
+  border-color: var(--color-accent-primary);
+  background: rgba(86, 156, 214, 0.1);
+  transform: translateY(-5px);
+}
+
+.palmares-number {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-black);
+  color: var(--color-accent-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.palmares-label {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 1px;
+  color: var(--color-text-inverse);
+}
+
+/* === CHAMPIONSHIP CARDS === */
+.championship-card {
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+  border: var(--border-width-thick) solid transparent;
+}
+
+.championship-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 15px 35px rgba(86, 156, 214, 0.2);
+}
+
+.championship-image {
+  height: 200px;
+  background: var(--color-bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xl);
+  font-style: italic;
+}
+
+.championship-content {
+  padding: var(--spacing-xl);
+}
+
+.championship-content h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.championship-content p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.championship-link {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.championship-link:hover {
+  text-decoration: underline;
+}
+
+/* === EXPERIENCE CARDS === */
+.experience-card {
+  background: var(--color-bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  border: var(--border-width-thick) solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.experience-card:hover {
+  border-color: var(--color-accent-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(86, 156, 214, 0.2);
+}
+
+.experience-icon {
+  font-size: var(--font-size-5xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.experience-card h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.experience-card p {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* === PARTNER CARDS === */
+.partner-logo {
+  height: 100px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-width-thick) solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.partner-logo:hover {
+  border-color: var(--color-accent-primary);
+  background: var(--color-bg-tertiary);
+  box-shadow: 0 5px 15px rgba(86, 156, 214, 0.2);
+}
+
+.logo-placeholder {
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+}

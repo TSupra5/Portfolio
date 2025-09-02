@@ -1,0 +1,98 @@
+/*
+ * CSS Reset and Normalization
+ * Modern CSS reset for consistent baseline
+ */
+
+/* === CSS RESET === */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === DOCUMENT SETUP === */
+html {
+  font-size: 100%; /* 16px base */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* === MEDIA ELEMENTS === */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* === FORM ELEMENTS === */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+/* === LIST ELEMENTS === */
+ul,
+ol {
+  list-style: none;
+}
+
+/* === LINKS === */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === HEADINGS === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+/* === ACCESSIBILITY === */
+/* Remove animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}

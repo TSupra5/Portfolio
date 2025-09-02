@@ -1,0 +1,35 @@
+/*
+ * Header Layout Component
+ * Header structure and positioning
+ */
+
+/* === HEADER === */
+.header {
+  position: relative;
+  z-index: var(--z-sticky);
+}
+
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+/* === HEADER SPACING === */
+.header-spacer {
+  height: 70px;
+}
+
+@media (min-width: 1024px) {
+  .header-spacer {
+    height: 80px;
+  }
+}

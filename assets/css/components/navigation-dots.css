@@ -1,0 +1,83 @@
+/*
+ * Navigation Dots Component
+ * Fixed side navigation for all devices
+ */
+
+/* === MOBILE NAVIGATION DOTS === */
+.mobile-nav-dots {
+  position: fixed;
+  right: var(--spacing-md);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--z-sticky);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* === DOT STYLES === */
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--border-radius-full);
+  background: rgba(204, 204, 204, 0.4);
+  border: var(--border-width-thick) solid rgba(86, 156, 214, 0.6);
+  text-decoration: none;
+  transition: all var(--transition-fast) var(--ease-in-out-smooth);
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-dot:hover,
+.nav-dot.active {
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+  transform: scale(1.2);
+  box-shadow: 0 0 15px rgba(86, 156, 214, 0.4);
+}
+
+/* === TOOLTIPS === */
+.dot-tooltip {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(45, 45, 48, 0.95);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-2xl);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  pointer-events: none;
+  max-width: calc(100vw - 60px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-dot:hover .dot-tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 30px;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 480px) {
+  .mobile-nav-dots {
+    right: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-dot {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  
+  /* Hide tooltips on very small screens */
+  .dot-tooltip {
+    display: none;
+  }
+}

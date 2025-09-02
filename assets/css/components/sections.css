@@ -1,0 +1,267 @@
+/*
+ * Section Components
+ * Individual section styles and layouts
+ */
+
+/* === HERO SECTION === */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-md);
+  color: var(--color-text-inverse);
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../images/image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px) brightness(0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-accent-secondary);
+  margin-bottom: var(--spacing-sm);
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-black);
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(45deg, var(--color-text-inverse), var(--color-accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: var(--line-height-tight);
+  text-align: left;
+}
+
+.hero-description {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
+  text-align: left;
+  line-height: var(--line-height-relaxed);
+}
+
+/* === TEAM SECTION === */
+.team-section {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+.team-description {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-2xl);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-loose);
+}
+
+/* === PALMARES SECTION === */
+.palmares-section {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-inverse);
+  text-align: center;
+}
+
+.palmares-section .section-title {
+  color: var(--color-text-inverse);
+}
+
+/* === CHAMPIONSHIPS SECTION === */
+.championships-section {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+.season-badge {
+  display: block;
+  text-align: center;
+  background: var(--color-accent-primary);
+  color: var(--color-text-inverse);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--border-radius-2xl);
+  font-weight: var(--font-weight-semibold);
+  margin: calc(-1 * var(--spacing-xl)) auto var(--spacing-2xl);
+  width: fit-content;
+}
+
+/* === EXPERIENCE SECTION === */
+.experience-section {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-tertiary);
+}
+
+.experience-intro {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-2xl);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-loose);
+}
+
+.experience-cta {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+}
+
+/* === PARTNERS SECTION === */
+.partners-section {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+.partners-intro {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--spacing-2xl);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-loose);
+}
+
+.become-partner {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background: var(--color-bg-tertiary);
+  border-radius: var(--border-radius-xl);
+  border-left: 5px solid var(--color-accent-primary);
+}
+
+.become-partner p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* === CONTACT SECTION === */
+.contact-section {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-primary);
+  color: var(--color-text-inverse);
+}
+
+.contact-section .section-title {
+  color: var(--color-text-inverse);
+}
+
+.contact-info h3,
+.contact-form h3 {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-accent-secondary);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+}
+
+.contact-icon {
+  font-size: var(--font-size-xl);
+}
+
+.social-links {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-link {
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: var(--border-width-thin) solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+/* === RESPONSIVE SECTIONS === */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: calc(var(--spacing-4xl) + var(--spacing-xl)) var(--spacing-md) var(--spacing-3xl);
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .team-section,
+  .palmares-section,
+  .championships-section,
+  .experience-section,
+  .partners-section,
+  .contact-section {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--spacing-2xl) var(--spacing-sm) var(--spacing-2xl);
+    min-height: 100vh;
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-xs);
+  }
+  
+  .hero-description {
+    font-size: var(--font-size-sm);
+  }
+  
+  .team-section,
+  .palmares-section,
+  .championships-section,
+  .experience-section,
+  .partners-section,
+  .contact-section {
+    padding: var(--spacing-2xl) var(--spacing-sm);
+  }
+}

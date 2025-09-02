@@ -12,18 +12,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(36, 94, 151, 0.98)';
-        navbar.style.backdropFilter = 'blur(15px)';
-    } else {
-        navbar.style.background = 'rgba(36, 94, 151, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
-    }
-});
-
 // Mobile menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');

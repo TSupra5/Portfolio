@@ -1,0 +1,90 @@
+/*
+ * Form Components
+ * Form styling and input elements
+ */
+
+/* === FORM GROUPS === */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+/* === INPUT STYLES === */
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: var(--border-width-thin) solid rgba(86, 156, 214, 0.2);
+  border-radius: var(--border-radius-md);
+  background: rgba(45, 45, 48, 0.5);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-base);
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--color-accent-primary);
+  background: rgba(45, 45, 48, 0.8);
+  box-shadow: 0 0 0 3px rgba(86, 156, 214, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* === CONTACT FORM SPECIFIC === */
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-base);
+}
+
+.contact-form .form-group input::placeholder,
+.contact-form .form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* === FORM VALIDATION === */
+.form-input.error,
+.form-textarea.error {
+  border-color: var(--color-error);
+}
+
+.form-input.success,
+.form-textarea.success {
+  border-color: var(--color-success);
+}
+
+.form-error {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.form-success {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}

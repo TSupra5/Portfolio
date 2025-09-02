@@ -1,0 +1,136 @@
+/*
+ * Grid System
+ * Flexible grid layouts for content organization
+ */
+
+/* === BASE GRID === */
+.grid {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-auto-sm {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid-auto-lg {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* === SPECIFIC GRIDS === */
+.team-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.palmares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.championships-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-xl);
+  margin: var(--spacing-2xl) 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+}
+
+/* === RESPONSIVE GRIDS === */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .championships-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .palmares-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .team-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === TABLET STYLES === */
+@media (min-width: 768px) {
+  .team-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .palmares-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .championships-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* === DESKTOP STYLES === */
+@media (min-width: 1024px) {
+  .experience-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
