@@ -5,18 +5,58 @@
     box-sizing: border-box;
 }
 
+/* Prevent horizontal overflow globally */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Ensure all sections stay within viewport */
+section {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #303030;
     background: #f5f5f5;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    width: 100%;
+}
+
+/* Ensure better mobile container spacing */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .nav-container {
+        padding: 0 10px;
+    }
+    
+    .navbar {
+        width: 100vw;
+        max-width: 100vw;
+    }
 }
 
 /* Typography */
@@ -42,15 +82,14 @@ body {
 
 /* Navigation - Mobile First */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: static;
+    width: 100%;
     background: rgba(36, 94, 151, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s ease;
     height: 60px;
+    box-sizing: border-box;
 }
 
 .nav-container {
@@ -61,6 +100,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .nav-logo h2 {
@@ -149,13 +190,26 @@ body {
 /* Mobile Navigation Dots - Phone Only */
 .mobile-nav-dots {
     position: fixed;
-    right: 20px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
+}
+
+/* Adjust positioning for very small screens */
+@media (max-width: 480px) {
+    .mobile-nav-dots {
+        right: 10px;
+        gap: 10px;
+    }
+    
+    .nav-dot {
+        width: 10px !important;
+        height: 10px !important;
+    }
 }
 
 .nav-dot {
@@ -194,6 +248,9 @@ body {
     visibility: hidden;
     transition: all 0.3s ease;
     pointer-events: none;
+    max-width: calc(100vw - 60px);
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-dot:hover .dot-tooltip {
@@ -202,10 +259,32 @@ body {
     right: 30px;
 }
 
+/* Hide tooltips on very small screens to prevent overflow */
+@media (max-width: 480px) {
+    .dot-tooltip {
+        display: none;
+    }
+}
+
 /* Hide mobile dots on desktop */
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .mobile-nav-dots {
         display: none;
+    }
+}
+
+/* Hide entire navbar on mobile devices (use dots instead) */
+@media (max-width: 1024px) {
+    .navbar {
+        display: none !important;
+    }
+    
+    .hamburger {
+        display: none !important;
+    }
+    
+    .nav-menu {
+        display: none !important;
     }
 }
 
@@ -215,12 +294,20 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    padding: 80px 15px 40px;
+    padding: 40px 15px 40px;
     color: white;
-    text-align: center;
+    text-align: right;
     overflow: hidden;
+}
+
+/* Better mobile hero spacing */
+@media (max-width: 480px) {
+    .hero {
+        padding: 30px 10px 30px;
+        min-height: 100vh;
+    }
 }
 
 .hero-bg {
@@ -267,15 +354,14 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1.2;
+    text-align: left;
 }
 
 .hero-description {
     font-size: 1rem;
     margin-bottom: 2rem;
     opacity: 0.9;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
 }
 
 .cta-button {
