@@ -49,7 +49,8 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
+    <div class="hero-bg"></div>
+    <img src="images/profile.JPG" alt="Photo de profil Thibaut Rouard" class="hero-profile-img" />
         <div class="hero-content">
             <div class="hero-text">
                 <!-- <span class="hero-subtitle">Bienvenue sur</span> -->
@@ -107,7 +108,7 @@
 
                 <div class="championship-card" data-modal="trinian">
                     <div class="championship-image">
-                            <img src="images/trinian/trinian1.jpeg" alt="trinian" class="championship-thumb" />
+                        <img src="images/trinian/trinian1.jpeg" alt="trinian" class="championship-thumb" />
                     </div>
                     <div class="championship-content">
                         <h3>TRINIANE RACING</h3>
@@ -118,15 +119,15 @@
                 </div>
             </div>
 
-            <div class="championship-card" data-modal="sprint">
+            <div class="championship-card" data-modal="rallye">
                 <div class="championship-image">
-                    <div class="image-placeholder">[Photo Course Sprint]</div>
+                    <img src="images/rallye/rallye3.png" alt="rallye" class="championship-thumb" />
                 </div>
                 <div class="championship-content">
-                    <h3>CHAMPIONSHIP SPRINT</h3>
-                    <span class="championship-date">2022-2025</span>
-                    <p>Des courses intenses et spectaculaires où chaque seconde compte. TLM Racing excelle dans cette discipline exigeante.</p>
-                    <button class="championship-link modal-trigger" data-modal="sprint">En savoir plus</button>
+                    <h3>ASSISTANCE RALLYE</h3>
+                    <span class="championship-date">Depuis 2024</span>
+                    <p>Assistance, réglages et ajustements précis, réparation stratégique. Gestion logistique et coordination d'équipe</p>
+                    <button class="championship-link modal-trigger" data-modal="rallye">En savoir plus</button>
                 </div>
             </div>
         </div>
@@ -190,12 +191,6 @@
                     <span class="experience-date">2024</span>
                     <p>Réalisé dans le cadre du CAP en mécanique en 2024</p>
                 </div>
-                
-                
-            </div>
-            
-            <div class="experience-cta">
-                <a href="#contact" class="cta-button">Découvrir les Offres</a>
             </div>
         </div>
     </section>
@@ -281,7 +276,6 @@
             </div>
         </div>
 
-
         <!--Alpine Modal -->
         <div id="alpine-modal" class="championship-modal">
             <div class="modal-header">
@@ -351,48 +345,30 @@
         </div>
 
         <!-- Sprint Championship Modal -->
-        <div id="sprint-modal" class="championship-modal">
+        <div id="rallye-modal" class="championship-modal">
             <div class="modal-header">
-                <h2>CHAMPIONSHIP SPRINT</h2>
+                <h2>ASSISTANCE RALLYE</h2>
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-content">
                 <div class="modal-image">
-                    <div class="image-placeholder">[Photo Course Sprint - Grande]</div>
+                    <div class="championship-carousel" data-carousel>
+                        <img src="images/rallye/rallye1.jpeg" alt="GT Course 1" class="carousel-img main" />
+                        <img src="images/rallye/rallye2.jpeg" alt="GT Course 2" class="carousel-img top" />
+                        <img src="images/rallye/rallye3.png" alt="GT Course 3" class="carousel-img bottom" />
+                    </div>
                 </div>
                 <div class="modal-details">
-                    <h3>Intensité Maximale</h3>
-                    <p>Des courses intenses et spectaculaires où chaque seconde compte. TLM Racing excelle dans cette discipline exigeante qui privilégie la vitesse pure et les dépassements.</p>
-                    
-                    <h4>Format de Course</h4>
-                    <ul>
-                        <li><strong>Durée:</strong> 25-45 minutes</li>
-                        <li><strong>Qualifications:</strong> 15 minutes chrono</li>
-                        <li><strong>Warm-up:</strong> 10 minutes d'échauffement</li>
-                        <li><strong>Points:</strong> Top 10 marquent des points</li>
-                    </ul>
-
-                    <h4>Circuits Sprint 2025</h4>
-                    <ul>
-                        <li>Magny-Cours (France) - Circuit technique</li>
-                        <li>Zandvoort (Pays-Bas) - Tracé rapide</li>
-                        <li>Hungaroring (Hongrie) - Dépassements difficiles</li>
-                        <li>Red Bull Ring (Autriche) - Hautes vitesses</li>
-                        <li>Imola (Italie) - Circuit historique</li>
-                    </ul>
-
-                    <h4>Pilotage Sprint</h4>
-                    <p>Le pilotage en sprint demande une agressivité contrôlée. Pas de place à l'erreur, chaque virage peut faire la différence entre la victoire et l'anonymat.</p>
-
-                    <h4>Tactiques</h4>
-                    <p>Stratégies de dépassement, gestion des pneumatiques sur courte distance, optimisation des réglages pour la vitesse pure. Le sprint récompense l'audace et la précision.</p>
-
-                    <h4>Nos Atouts</h4>
-                    <ul>
-                        <li>Pilotes spécialisés en sprint</li>
-                        <li>Réglages optimisés pour la vitesse</li>
-                        <li>Stratégies de course agressives</li>
-                        <li>Équipe réactive et efficace</li>
+                    <h3>Expérience Rallye</h3>
+                    <ul class="rallye-details">
+                        <li><span class="underline" style="font-weight: bold; font-size: 1.08em; letter-spacing: 0.5px;">Véhicules suivis&nbsp;: <span style="font-weight:bold;">A110 RGT</span> &nbsp;•&nbsp; <span style="font-weight:bold;">Subaru Impreza R4</span> &nbsp;•&nbsp; <span style="font-weight:bold;">Clio 4 R3</span></span></li>
+                        <li><span class="underline">Intervention rapide et efficace pendant les périodes d'assistance, en toutes conditions météo.</span></li>
+                        <li><span class="underline">Check-up complet du véhicule : contrôle mécanique, électronique et des organes de sécurité.</span></li>
+                        <li><span class="underline">Réglages et ajustements précis en fonction de l'évolution de la course, de la météo et du type de surface.</span></li>
+                        <li><span class="underline">Changement de pneus et ravitaillement sécurisés.</span></li>
+                        <li><span class="underline">Réparations stratégiques et solutions de dépannage rapide en cas de casse ou d'accident pour assurer la poursuite de l'épreuve.</span></li>
+                        <li><span class="underline">Installation, organisation et gestion logistique intégrale du poste d'assistance (outillage, ravitaillement, pneumatiques).</span></li>
+                        <li><span class="underline">Travail d'équipe parfaitement coordonné, en liaison permanente avec l'équipage et le chef de course.</span></li>
                     </ul>
                 </div>
             </div>
