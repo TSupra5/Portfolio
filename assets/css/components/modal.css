@@ -31,6 +31,8 @@
  * Championship modal system with overlay and animations
  */
 
+
+
 /* === MODAL OVERLAY === */
 .modal-overlay {
   position: fixed;
@@ -211,12 +213,17 @@
   .championship-modal {
     width: 95vw;
     max-height: 95vh;
+    overflow-x: hidden;
   }
-  
   .modal-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     padding: var(--spacing-lg);
+    overflow-x: hidden;
+    word-break: break-word;
+  }
+  .modal-overlay {
+    overflow-x: hidden;
   }
   
   .modal-header {
@@ -237,10 +244,15 @@
   .championship-modal {
     width: 98vw;
     max-height: 98vh;
+    overflow-x: hidden;
   }
-  
   .modal-content {
     padding: var(--spacing-md);
+    overflow-x: hidden;
+    word-break: break-word;
+  }
+  .modal-overlay {
+    overflow-x: hidden;
   }
   
   .modal-header {
