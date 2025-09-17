@@ -13,6 +13,7 @@ import { initMobileNavDots } from './components/mobile-nav-dots.js';
 import { initContactForm } from './components/contact-form.js';
 import { initCounters } from './components/counters.js';
 import { initModals } from './components/modal.js';
+import { initChampionshipCarousels } from './components/carousel.js';
 
 // Initialize application when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initContactForm();
     initCounters();
     initModals();
+    initChampionshipCarousels();
     
     console.log('TLM Racing Portfolio - JavaScript modules loaded successfully');
 

@@ -1,3 +1,31 @@
+/* Themed links in modal lists */
+.championship-modal ul li a {
+  color: var(--color-accent-primary, #569cd6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.championship-modal ul li a:hover,
+.championship-modal ul li a:focus {
+  color: var(--color-accent-secondary, #2b8cc4);
+  text-decoration-thickness: 2px;
+}
+/* Custom bullet points for modal lists */
+.championship-modal ul li, .championship-modal ul.roscar-details li {
+  position: relative;
+  padding-left: 1.5em;
+  list-style: none;
+}
+.championship-modal ul li::before, .championship-modal ul.roscar-details li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-primary, #569cd6);
+  font-size: 1.1em;
+  line-height: 1;
+  top: 0.1em;
+}
 /*
  * Modal Component
  * Championship modal system with overlay and animations
