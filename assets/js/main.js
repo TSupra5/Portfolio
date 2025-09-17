@@ -28,6 +28,26 @@ document.addEventListener('DOMContentLoaded', function() {
     initModals();
     
     console.log('TLM Racing Portfolio - JavaScript modules loaded successfully');
+
+            // Device-adaptive Contact span (phone number)
+            const contactSpan = document.getElementById('main-contact-link');
+            if (contactSpan) {
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                const phoneNumber = '+33789532017';
+                if (isMobile) {
+                    contactSpan.addEventListener('click', function() {
+                        window.location.href = 'tel:' + phoneNumber;
+                    });
+                } else {
+                    contactSpan.addEventListener('click', function() {
+                        // Copy to clipboard
+                        navigator.clipboard.writeText(phoneNumber);
+                        // Show tooltip/alert
+                        contactSpan.title = 'Numéro copié !';
+                        setTimeout(() => { contactSpan.title = ''; }, 1500);
+                    });
+                }
+            }
 });
 
 // Global error handler

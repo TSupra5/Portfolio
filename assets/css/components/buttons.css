@@ -105,7 +105,7 @@
   transition: all var(--transition-fast) var(--ease-in-out-smooth);
   border: var(--border-width-thick) solid var(--color-accent-primary);
   min-width: 160px;
-  text-align: left;
+  text-align: center;
 }
 
 .cta-button:hover {

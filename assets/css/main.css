@@ -22,6 +22,7 @@
 @import 'components/modal.css';
 @import 'components/navigation-dots.css';
 @import 'components/sections.css';
+@import 'components/logo.css';
 
 /* === UTILITIES === */
 @import 'utilities/responsive.css';
