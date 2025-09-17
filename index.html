@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thibaut Rouard - Freelance Mécanique</title>
     <link rel="stylesheet" href="assets/css/main.css">
+        <!-- FontAwesome CDN (CSS) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- FontAwesome fallback via JS loader -->
+        <script>
+            (function() {
+                var test = document.createElement('i');
+                test.className = 'fa-brands fa-linkedin';
+                document.body.appendChild(test);
+                var style = window.getComputedStyle(test, null);
+                if (!style || style.fontFamily.indexOf('Font Awesome') === -1) {
+                    var faScript = document.createElement('script');
+                    faScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js';
+                    faScript.crossOrigin = 'anonymous';
+                    document.head.appendChild(faScript);
+                }
+                document.body.removeChild(test);
+            })();
+        </script>
+        <!-- FontAwesome fallback via CSS @import (for custom CSS) -->
+        <style>
+            @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+        </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -142,53 +164,53 @@
             </p>
 
             <div class="experience-card">
-                <div class="experience-icon">🎓</div>
+                <div class="experience-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                 <h3>Diplômé en Mécanique et Informatique </h3>
-                <span class="experience-date">2020-2024</span>
+                
                 <p>CAP 1 An CAP maintenance des véhicules 2023 - 2024<br> BTS Services Informatiques aux Organisations 2020 - 2022</p>
             </div> 
 
             <div class="experience-grid">
                 <div class="experience-card">
-                    <div class="experience-icon">🏎️</div>
+                    <div class="experience-icon"><i class="fa-solid fa-flag-checkered"></i></div>
                     <h3>assistance et pit stop</h3>
-                    <span class="experience-date">2022</span>
+                    
                     <p>Intervenir sur le ravitaillement, les pneus, les réparations d’urgence et les réglages de dernière minute, rapidement et avec précision.</p>
                 </div>
                 
                 <div class="experience-card">
-                    <div class="experience-icon">📈</div>
+                    <div class="experience-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>Télémétrie</h3>
-                    <span class="experience-date">2023</span>
+                    
                     <p>Analyse et interprétation des différentes acquisitions : VBOX, AIM, ECU intégré, Pi Toolbox, RaceCon.</p>
                 </div>
                 
                 <div class="experience-card">
-                    <div class="experience-icon">⚙️</div>
+                    <div class="experience-icon"><i class="fa-solid fa-gears"></i></div>
                     <h3>Préparation</h3>
                     <span class="experience-date">2023</span>
                     <p>Préparation et mise au point de véhicules de compétition, avec contrôle et adaptation aux normes de sécurité</p>
                 </div>
 
                 <div class="experience-card">
-                    <div class="experience-icon">🥂</div>
+                    <div class="experience-icon"><i class="fa-solid fa-comments"></i></div>
                     <h3>Communication et Coordination</h3>
-                    <span class="experience-date">2024</span>
+                    
                     <p>Assurer la coordination de l’assistance et la communication avec les clients et pilotes pour garantir le bon déroulement des événements. »
                         Entretien « Effectuer le suivi des véhicules de compétition et leur entretien régulier</p>
                 </div>              
                 
                 <div class="experience-card">
-                    <div class="experience-icon">🔧</div>
+                    <div class="experience-icon"><i class="fa-solid fa-wrench"></i></div>
                     <h3>Entretien</h3>
-                    <span class="experience-date">2024</span>
+                    
                     <p>Effectuer le suivi des véhicules de compétition, réaliser l’entretien préventif et curatif, diagnostiquer les pannes et corriger les faiblesses potentielles</p>
                 </div>
 
                 <div class="experience-card">
-                    <div class="experience-icon">🩹</div>
+                    <div class="experience-icon"><i class="fa-solid fa-kit-medical"></i></div>
                     <h3>Sauveteur secouriste du travail</h3>
-                    <span class="experience-date">2024</span>
+                    
                     <p>Réalisé dans le cadre du CAP en mécanique en 2024</p>
                 </div>
             </div>
@@ -198,42 +220,46 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">NOUS CONTACTER</h2>
+            <h2 class="section-title">CONTACT</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Informations de Contact</h3>
-                    <div class="contact-item">
-                        <span class="contact-icon">📧</span>
-                        <span>contact@tlmracing.fr</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📱</span>
-                        <span id="main-contact-link" style="text-decoration: underline;">+33 07 89 53 20 17</span>
-                    </div>
-                        <span class="contact-icon">📍</span>
-                        <span>Circuit de Nevers Magny-Cours<br>58470 Magny-Cours, France</span>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Facebook</a>
-                    </div>
+                    <div class="contact-row-flex">
+                        <div class="social-links">
+                            <div class="insta-card">
+                                <div class="insta-avatar">
+                                    <img src="images/profile.JPG" alt="Instagram profile Thibaut Rouard" />
+                                </div>
+                                <div class="insta-info">
+                                    <span class="insta-username">@thibaut.rouard</span>
+                                    <a href="https://www.instagram.com/thibaut_rouard_55?igsh=MXJhYXhqeXFzNWFnNw%3D%3D&utm_source=qr" class="insta-follow" target="_blank" rel="noopener">
+                                        <i class="fa-brands fa-instagram"></i> Voir le profil
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-items-col">
+                            <div class="contact-item">
+                                <a href="mailto:thibautrouard.racing@gmail.com" class="cta-button">thibautrouard.racing@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <a href="tel:+33789532017" id="main-contact-link" class="cta-button">07 89 53 20 17</a>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
-                
                 <div class="contact-form">
-                    <h3>Nous Écrire</h3>
-                    <form>
+                    <form id="contact-mailto-form">
                         <div class="form-group">
-                            <input type="text" placeholder="Nom *" required>
+                            <input type="text" name="name" id="contact-name" placeholder="Nom *" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email *" required>
+                            <input type="email" name="email" id="contact-email" placeholder="Email *" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Sujet *" required>
+                            <input type="text" name="subject" id="contact-subject" placeholder="Sujet *" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Message *" rows="6" required></textarea>
+                            <textarea name="message" id="contact-message" placeholder="Message *" rows="6" required></textarea>
                         </div>
                         <button type="submit" class="cta-button">Envoyer le Message</button>
                     </form>
@@ -377,5 +403,20 @@
 
     <!-- JavaScript Modules -->
     <script type="module" src="assets/js/main.js"></script>
+    <script>
+// Mailto form handler
+const form = document.getElementById('contact-mailto-form');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('contact-name').value.trim();
+        const email = document.getElementById('contact-email').value.trim();
+        const subject = document.getElementById('contact-subject').value.trim();
+        const message = document.getElementById('contact-message').value.trim();
+        const mailto = `mailto:thibautrouard.racing@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Nom: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
+        window.location.href = mailto;
+    });
+}
+</script>
 </body>
 </html>
