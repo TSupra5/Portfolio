@@ -106,6 +106,7 @@ function openModal(overlay, targetModal, modals) {
     
     // Prevent body scroll
     document.body.style.overflow = 'hidden';
+    document.body.style.overflowX = 'hidden';
     
     // Focus on modal for accessibility
     targetModal.focus();
@@ -136,6 +137,7 @@ function closeModal(overlay, modals) {
     
     // Restore body scroll
     document.body.style.overflow = '';
+    document.body.style.overflowX = '';
     
     // Trigger custom event
     const event = new CustomEvent('modalClosed');

@@ -31,6 +31,11 @@
  * Championship modal system with overlay and animations
  */
 
+/* === PREVENT HORIZONTAL SCROLL WHEN MODAL IS ACTIVE === */
+.modal-overlay.active {
+  overflow: hidden;
+}
+
 /* === MODAL OVERLAY === */
 .modal-overlay {
   position: fixed;
@@ -47,6 +52,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-normal) var(--ease-in-out-smooth);
+  overflow: hidden;
 }
 
 .modal-overlay.active {
@@ -63,6 +69,7 @@
   max-height: 90vh;
   width: 1000px;
   overflow: hidden;
+  overflow-x: hidden;
   transform: translateY(50px) scale(0.9);
   transition: all var(--transition-normal) var(--ease-in-out-smooth);
   border: var(--border-width-thin) solid rgba(86, 156, 214, 0.3);
@@ -121,12 +128,16 @@
   padding: var(--spacing-2xl);
   max-height: calc(90vh - 100px);
   overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-image {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .modal-image .image-placeholder {
@@ -145,6 +156,9 @@
 
 .modal-details {
   color: var(--color-text-primary);
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-details h3 {
@@ -167,16 +181,22 @@
   color: var(--color-text-primary);
   line-height: var(--line-height-relaxed);
   margin-bottom: var(--spacing-lg);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-details ul {
   margin: var(--spacing-md) 0 var(--spacing-lg) var(--spacing-lg);
   color: var(--color-text-primary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-details li {
   margin-bottom: var(--spacing-sm);
   line-height: var(--line-height-relaxed);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-details strong {
@@ -211,12 +231,14 @@
   .championship-modal {
     width: 95vw;
     max-height: 95vh;
+    overflow-x: hidden;
   }
   
   .modal-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
     padding: var(--spacing-lg);
+    overflow-x: hidden;
   }
   
   .modal-header {
@@ -225,6 +247,8 @@
   
   .modal-header h2 {
     font-size: var(--font-size-xl);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .modal-image .image-placeholder {
@@ -237,10 +261,12 @@
   .championship-modal {
     width: 98vw;
     max-height: 98vh;
+    overflow-x: hidden;
   }
   
   .modal-content {
     padding: var(--spacing-md);
+    overflow-x: hidden;
   }
   
   .modal-header {
@@ -249,10 +275,14 @@
   
   .modal-details h3 {
     font-size: var(--font-size-lg);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .modal-details h4 {
     font-size: var(--font-size-base);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 

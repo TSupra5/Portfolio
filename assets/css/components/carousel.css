@@ -52,7 +52,7 @@
   justify-content: center;
   background: none;
   border-radius: 12px;
-  overflow: visible;
+  overflow: hidden;
 }
 .carousel-img {
   position: absolute;
